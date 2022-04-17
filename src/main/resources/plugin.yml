@@ -1,0 +1,6 @@
+name: MongoColletion
+author: D151l
+api-version: 1.13
+version: 1.0.0
+
+main: de.d151l.mongodb.SpigotPlugin

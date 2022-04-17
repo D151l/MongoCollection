@@ -1,0 +1,36 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.20'
+    id 'com.github.johnrengelman.shadow' version '7.1.0'
+}
+
+group = 'de.d151l'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    implementation 'org.mongodb:mongodb-driver-legacy:4.5.1'
+
+    compileOnly(files("../libs/paper.jar"))
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
+
+tasks {
+    build {
+        dependsOn(shadowJar)
+    }
+}
