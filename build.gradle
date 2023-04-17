@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
-    implementation 'org.mongodb:mongodb-driver-legacy:4.6.0'
+    implementation 'org.mongodb:mongodb-driver-legacy:4.9.1'
 
     compileOnly(files("../libs/paper.jar"))
 }
